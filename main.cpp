@@ -32,10 +32,12 @@ void Initialize( );
 void Cleanup( );
 void QuitOnSDLError( );
 void QuitOnOpenGlError( );
+void DrawLines();
 
 // Variables
 SDL_Window* g_pWindow{ nullptr }; // The window we'll be rendering to
 SDL_GLContext g_pContext; // OpenGL context
+int g_NrFrames{ 0 };
 #pragma endregion coreDeclarations
 
 #pragma region gameDeclarations
@@ -86,7 +88,12 @@ void Draw( )
 {
 	ClearBackground( );
 	// add your drawing code here
+	g_NrFrames++;
 	
+}
+void DrawLines()
+{
+
 }
 #pragma endregion gameImplementations
 
